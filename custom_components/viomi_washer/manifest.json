@@ -1,0 +1,17 @@
+{
+  "domain": "viomi_washer",
+  "name": "Xiaomi/Viomi Washing Machine",
+  "config_flow": true,
+  "version": "2023.2.0",
+  "iot_class": "local_polling",
+  "documentation": "https://github.com/tsunglung/ViomiWashingMachine",
+  "issue_tracker": "https://github.com/tsunglung/ViomiWashingMachine/issues",
+  "requirements": [
+    "construct>=2.10.56",
+    "python-miio>=0.5.11"
+  ],
+  "dependencies": [],
+  "codeowners": [
+    "@tsunglung"
+  ]
+}
