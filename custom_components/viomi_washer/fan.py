@@ -15,18 +15,16 @@ from homeassistant.const import (
     CONF_HOST,
     CONF_NAME,
     CONF_TOKEN,
+    CONF_DEVICE,
     CONF_MAC
 )
 from homeassistant.components.fan import (
     FanEntity,
-    SUPPORT_SET_SPEED,
-    SUPPORT_OSCILLATE,
-    SUPPORT_DIRECTION,
+    FanEntityFeature,
     PLATFORM_SCHEMA
 )
 from homeassistant.helpers.restore_state import RestoreEntity
 from homeassistant.components.xiaomi_miio.const import (
-    CONF_DEVICE,
     CONF_FLOW_TYPE,
 )
 from .const import (
@@ -133,7 +131,7 @@ class ViomiWashingMachine(FanEntity, RestoreEntity):
     @property
     def supported_features(self):
         """Flag supported features."""
-        return SUPPORT_SET_SPEED | SUPPORT_OSCILLATE | SUPPORT_DIRECTION
+        return FanEntityFeature.SET_SPEED | FanEntityFeature.OSCILLATE | FanEntityFeature.DIRECTION
 
     @property
     def name(self):
