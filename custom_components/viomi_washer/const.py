@@ -9,7 +9,7 @@ from homeassistant.components.sensor import (
 )
 
 from homeassistant.const import (
-    TIME_MINUTES
+    UnitOfTime
 )
 
 DEFAULT_NAME = "Xiaomi/Viomi Washing Machine"
@@ -92,7 +92,7 @@ WASHER_SENSORS: tuple[ViomiWasherSensorDescription, ...] = (
     ViomiWasherSensorDescription(
         key="remain_time",
         name="Remain time",
-        native_unit_of_measurement=TIME_MINUTES,
+        native_unit_of_measurement=UnitOfTime.MINUTES,
         state_class=SensorStateClass.MEASUREMENT,
         icon="mdi:timelapse"
     )
